@@ -9,6 +9,9 @@ const db = require("./config/db");
 dotenv.config({ path: "./config.env" });
 const app = express();
 
+app.get('/', (req, res) => {
+  res.send('<h2>TESTAPP</h2>')})
+
 db();
 
 // Body Parser
