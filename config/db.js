@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 async function dbConfig() {
   try {
-    await mongoose.connect("mongodb+srv://skipper:password@cluster0.368nz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+    await mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
